@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-um: #E4C59E;
+    --cor-dois: #803D3B;
+    --cor-tres: #322b2e;
+    --cor-quatro: #AF8260;
+    --cor-cinco: white;
+
+    --fonte-primaria: "Playwrite DE Grund", "cursive";
+}
+
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-um); 
+}
+
+.principal {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+}
+
+.principal__codigo__texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.principal__codigo__botao {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.alerta {
+    display: flex;
+}
+
+.encode {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 80px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    color: var(--cor-quatro);
+    border: var(--cor-dois);
+    background-color: var(--cor-quatro);
+}
+
+.decode {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 80px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    color: var(--cor-dois);
+    border: var(--cor-dois);
+    background-color: var(--cor-dois);
+}
+
+.encode:hover {
+    box-shadow: 1px 1px 10px var(--cor-dois);
+    border: 4px solid var(--cor-dois);
+    color: var(--cor-dois);
+    border: none;
+}
+
+.decode:hover {
+    box-shadow: 1px 1px 10px var(--cor-dois);
+    border: 4px solid var(--cor-cinco);
+    color: var(--cor-quatro);
+    border: none;
+}
+
+#textAreaEntrada {
+    font-family: var(--fonte-primaria);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--cor-tres);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 10px;
+    width: 600px;
+    height: 500px;
+    align-items: top;
+    background-color: var(--cor-um); 
+    resize: none;
+}
+
+#textAreaSaida {
+    font-family: var(--fonte-primaria);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 10px;
+    width: 400px;
+    height: 80px;
+    align-items: top;
+    background-color: var(--cor-um); 
+    color: var(--cor-tres);
+    resize: none;
+}
+
+.principal__copia {
+    display: flex;
+    flex-direction: column;
+    border: solid var(--cor-quatro);
+    border-radius: 50px;
+    padding: 30px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.principal__copia__texto {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+#copy {
+    padding: 10px;
+    border-radius: 30px;
+    background-color: var(--cor-dois);
+    color: var(--cor-um);
+    border: var(--cor-dois);
+}
+
+@media (max-width: 1200px) {
+    .principal {
+        flex-direction: column;
+    }
+    .principal__codigo {
+        width: auto;
+    }
+}

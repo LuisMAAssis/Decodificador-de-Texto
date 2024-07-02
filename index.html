@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <title>Decodificador</title>
+</head>
+<body>
+    <main class="principal">
+        <section class="principal__codigo">
+            <div class="principal__codigo__texto">
+                <textarea name="" id="textAreaEntrada" placeholder="Digite seu texto"></textarea>
+                <span class="alerta"><i class="ph-duotone ph-exclamation-mark"></i>Apenas letras 
+                    minúsculas e sem acento</span>
+            </div>
+            <div class="principal__codigo__botao">
+                <button class="encode" onclick="aoClicar()">Criptografar</button>
+                <button class="decode" onclick="decodificar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="principal__copia">
+            <img src="assets/imagemChallenger2copia.png" alt="Homem com cachimbo olhando por 
+                uma lupa" id="imagem" style="display: flex;">
+            <div class="principal__copia__texto">
+                <textarea name="" id="textAreaSaida" oninput="verificarTextArea()" 
+                    placeholder="Digite um texto que você deseja criptografar ou descriptografar no local designado."></textarea>
+                <button id="copy" onclick="copiar()" style="display: none;">copiar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
